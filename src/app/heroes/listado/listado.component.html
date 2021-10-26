@@ -1,0 +1,22 @@
+<p>Listado de wafles</p>
+
+<div *ngIf="waflesborrados; else noborrado">
+        <SPAN>HEROE BORRADO: {{waflesborrados}}</SPAN>
+     <h3></h3>
+</div>
+<ng-template #noborrado>
+
+    <h3>No borrado ni mergas</h3>
+</ng-template>
+ 
+    
+ 
+<button (click)="borrar()">Borrar</button>
+
+<ul>
+    <li *ngFor="let wafles of wafles; let i=index">
+    {{i+1}}  ---  {{wafles}}
+    </li>
+ 
+</ul>
+
